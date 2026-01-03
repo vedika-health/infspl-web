@@ -1,8 +1,10 @@
 <?php include 'db_connection.php'; ?>
 <?php
 $id_cat = $_GET['id'];
-$sql = "SELECT * FROM blogs WHERE language_id=169 && bcategory_id=$id_cat";
-$result = $conn->query($sql);
+$sql = "SELECT * FROM blogs 
+        WHERE language_id = 169 
+        AND bcategory_id = $id_cat
+        ORDER BY created_at DESC";$result = $conn->query($sql);
 $img_path = 'https://infspl.com/development/assets/front/img/';
 ?>
 
