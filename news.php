@@ -1,10 +1,12 @@
 <?php include 'db_connection.php'; ?>
 <?php
-$id_cat = $_GET['id'];
+$id_cat = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $sql = "SELECT * FROM blogs 
         WHERE language_id = 169 
         AND bcategory_id = $id_cat
-        ORDER BY created_at DESC";$result = $conn->query($sql);
+        ORDER BY created_at DESC";
+		
+		$result = $conn->query($sql);
 $img_path = 'https://infspl.com/development/assets/front/img/';
 ?>
 
@@ -200,19 +202,29 @@ $img_path = 'https://infspl.com/development/assets/front/img/';
 									$name = $row['title'];
 
 									echo " 
-									<li class='post post-loop col-sm-4 '>
-									<div class='post-thumbs'>
-										<a href='news-details.php?id=$id'><img alt='' src=$img_blog_path></a>
-									</div>
-									<div class='post-entry'>
-										<div class='post-meta'>
-											<span class='pub-date'><em class='fa fa-calendar' aria-hidden='true'></em>$date</span>
-										</div>
-										<h2><a href='news-details.php?id=$id'>$name</a></h2>
-										
-										<a class='btn btn-alt' href=news-details.php?id=$id'>Read More</a>
-									</div>
-								</li>";
+<li class='post post-loop col-sm-4'>
+  <div class='post-thumbs'>
+    <a href='news-details.php?id=$id&cat=$id_cat'>
+      <img alt='' src='$img_blog_path'>
+    </a>
+  </div>
+
+  <div class='post-entry'>
+    <div class='post-meta'>
+      <span class='pub-date'>
+        <em class='fa fa-calendar' aria-hidden='true'></em>$date
+      </span>
+    </div>
+
+    <h2>
+      <a href='news-details.php?id=$id&cat=$id_cat'>$name</a>
+    </h2>
+
+    <a class='btn btn-alt' href='news-details.php?id=$id&cat=$id_cat'>
+      Read More
+    </a>
+  </div>
+</li>";
 
 
 								}

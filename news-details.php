@@ -8,27 +8,28 @@ $sql_sCat = "SELECT * FROM blogs WHERE language_id=169 && id=$id_cat";
 $result_sCat = $conn->query($sql_sCat);
 $img_path = 'https://infspl.com/development/assets/front/img/';
 
-$sql_blogs = "SELECT * FROM blogs WHERE language_id=169";
-$result_blogs = $conn->query($sql_blogs);
-$blogs_path = 'blogs/';
+$id = (int) $_GET['id']; // security
 
+$sql = "SELECT * FROM blogs 
+        WHERE language_id = 169 
+        AND id = $id
+        LIMIT 1";
 
-if ($result_blogs->num_rows > 0) {
-	// Output data of each row
-	while ($row1 = $result_blogs->fetch_assoc()) {
-		$blog_id = $row1['id'];
-		$blog_name = $row1['title'];
-		$blog_image = $row1['main_image'];
-		$img_blog_path = $img_path . $blogs_path . $blog_image;
-		$serial_content = $row1['content'];
-		$date_time = strtotime($row1['created_at']);
-		$date = date('d/M/Y', $date_time);
+$result = $conn->query($sql);
 
-
-	}
-} else {
-	echo "0 results";
+if ($result->num_rows == 0) {
+	echo "Blog not found";
+	exit;
 }
+
+$row = $result->fetch_assoc();
+
+$blog_name = $row['title'];
+$serial_content = $row['content'];
+$blog_image = $row['main_image'];
+$date = date('d/M/Y', strtotime($row['created_at']));
+
+$img_blog_path = $img_path . 'blogs/' . $blog_image;
 
 
 
