@@ -1,6 +1,6 @@
 <?php
 
-$servername = "89.117.157.204";
+$servername = "82.25.121.98"; // Hostinger MySQL for remote – or use srv1020.hstgr.io
 $username = "u156619954_infs";
 $password = "Investments2023@";
 $database = "u156619954_infs";
@@ -14,15 +14,4 @@ if ($conn->connect_error) {
 } else {
     // print('connected');
 }
-
-//get result
-
-// function getResult($sql, $connection)
-// {
-//     $sql = "SELECT * FROM basic_settings WHERE language_id=169";
-//     $result = $connection->query($sql);
-//     return $result;
-
-
-// }
 ?>
