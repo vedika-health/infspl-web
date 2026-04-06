@@ -59,7 +59,7 @@
 							</p>
 							<p style="margin: 10px 0;">
 								<em class="fa fa-phone" aria-hidden="true" style="margin-right: 8px;"></em>
-								<span>+91 8855815433</span>
+								<span>+91 9921003190</span>
 							</p>
 							<ul class="social">
 								<li><a href="https://www.facebook.com/intellectualservices03"><em
@@ -154,7 +154,7 @@
 	}
 </style>
 
-<a href="tel:+918855815433" class="floating-call-icon" title="Call Us">
+<a href="tel:+919921003190" class="floating-call-icon" title="Call Us">
 	<i class="fa fa-phone" aria-hidden="true"></i>
 </a>
 
@@ -162,7 +162,7 @@
 <script type="text/javascript">
 	(function () {
 		var options = {
-			whatsapp: "918855815433", // WhatsApp number
+			whatsapp: "919921003190", // WhatsApp number
 			call_to_action: "Message us", // Call to action
 			position: "right", // Position changed to 'right'
 		};

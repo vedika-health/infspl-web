@@ -69,7 +69,7 @@ $img_blog_path = $img_path . 'blogs/' . $blog_image;
 							</li>
 							<li class="t-phone t-phone1">
 								<em class="fa fa-phone" aria-hidden="true"></em>
-								<span style="color: #1e566f">+91 8855815433</span>
+								<span style="color: #1e566f">+91 9921003190</span>
 							</li>
 						</ul>
 					</div>
@@ -216,7 +216,7 @@ $img_blog_path = $img_path . 'blogs/' . $blog_image;
 
 					<div class="cta-sameline">
 						<h2>Have any Question?</h2>
-						<p>We're here to help. Send us an email or call us at +91 8855815433.</p>
+						<p>We're here to help. Send us an email or call us at +91 9921003190.</p>
 						<a class="btn btn-alt" href="contact.php">Contact Us</a>
 					</div>
 
@@ -292,7 +292,7 @@ $img_blog_path = $img_path . 'blogs/' . $blog_image;
 								</p>
 								<p>
 									<!-- <span>Toll Free</span>: (1-800) 234 5678<br> -->
-									<span>Phone</span>: +91 8855815433
+									<span>Phone</span>: +91 9921003190
 								</p>
 								<ul class="social">
 									<li><a href="https://www.facebook.com/intellectualservices03"><em

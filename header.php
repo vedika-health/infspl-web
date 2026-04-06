@@ -24,7 +24,7 @@ if (!isset($conn)) {
 						</li>
 						<li class="t-phone t-phone1">
 							<em class="fa fa-phone" aria-hidden="true"></em>
-							<span style="color: #1e566f">+91 8855815433</span>
+							<span style="color: #1e566f">+91 9921003190</span>
 						</li>
 					</ul>
 				</div>
